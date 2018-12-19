@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.linkstar.app.store.R;
+import com.linkstar.app.store.utils.AndroidBug5497Workaround;
 
 /**
  * Created by hx
@@ -24,6 +25,7 @@ public abstract class BaseNoTitleActivity extends BaseActivity {
                 .statusBarDarkFont(true, 0.2f)
                 .init();
         setContentView(setLayout());
+        AndroidBug5497Workaround.assistActivity(this);
         initView();
         event();
         loadData();

@@ -3,6 +3,7 @@ package com.linkstar.app.store.base;
 import android.os.Bundle;
 
 import com.gyf.barlibrary.ImmersionBar;
+import com.linkstar.app.store.utils.AndroidBug5497Workaround;
 
 /**
  * Created by hx
@@ -23,6 +24,7 @@ public abstract class BasePicTitleActivity extends BaseActivity {
         initView();
         event();
         loadData();
+        AndroidBug5497Workaround.assistActivity(this);
     }
 
     @Override
@@ -52,4 +54,5 @@ public abstract class BasePicTitleActivity extends BaseActivity {
      * 数据加载
      */
     public abstract void loadData();
+
 }

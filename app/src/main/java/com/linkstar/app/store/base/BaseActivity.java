@@ -3,7 +3,10 @@ package com.linkstar.app.store.base;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import me.imid.swipebacklayout.lib.app.SwipeBackActivity;
@@ -24,6 +27,7 @@ public class BaseActivity extends SwipeBackActivity {
     private Toast toast;
     private Context context;
     public static boolean is_login = false;
+    private ImageView imgBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +103,42 @@ public class BaseActivity extends SwipeBackActivity {
                 imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
             }
         }
+    }
+
+    protected void setTitleMsg(String main, String sub) {
+        TextView tvTitle = (TextView) findViewById(R.id.tv_main_title);
+        TextView tvSub = (TextView) findViewById(R.id.tv_sub_title);
+        if (null != main)
+            tvTitle.setText(main);
+        if (null != sub) {
+            tvSub.setText(sub);
+            tvSub.setVisibility(View.VISIBLE);
+        }
+        setBackClick();
+    }
+
+
+    /**
+     * 为Activity标题下的右边文字设置点击事件
+     */
+    protected void setSubClick(View.OnClickListener listener) {
+        TextView tvSub = (TextView) this.findViewById(R.id.tv_sub_title);
+        if (null != listener)
+            tvSub.setOnClickListener(listener);
+    }
+
+    /**
+     * 为Activity标题下的返回箭头设置点击事件
+     */
+    protected void setBackClick() {
+        //返回箭头点击事件，调用返回键
+        imgBack = (ImageView) findViewById(R.id.img_close_activity);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
 }

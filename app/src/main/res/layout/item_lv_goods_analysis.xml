@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="14dp">
+
+        <ImageView
+            android:id="@+id/img_goods"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/test_goods_s_img_4" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/img_goods">
+
+            <TextView
+                style="@style/text_style_black_title_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:maxLines="2"
+                android:text="eoodoo初生婴儿衣服新生儿礼盒秋冬套装满月礼物母婴宝宝用品大全" />
+
+            <TextView
+                style="@style/text_style_blue_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="￥899.00"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_style_dark_gray_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="销量" />
+
+            <TextView
+                style="@style/text_style_blue_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/line_height_1px"
+            android:layout_height="15dp"
+            android:background="@color/line_color_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_style_dark_gray_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏量" />
+
+            <TextView
+                style="@style/text_style_blue_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_gray" />
+</LinearLayout>

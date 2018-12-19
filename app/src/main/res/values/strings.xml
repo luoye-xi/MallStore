@@ -7,4 +7,17 @@
     <string name="account_check_err">请输入正确的账号</string>
     <string name="password_check_err">请输入合理的密码</string>
     <string name="double_exit">再按一次退出程序!</string>
+    <string name="main_title">Seven trees</string>
+    <string name="month_num">本月销售额</string>
+    <string name="online_num">线上销售额</string>
+    <string name="offline_num">线下销售额</string>
+    <string name="month_order_num">本月订单数</string>
+    <string name="day_num">今日销售额</string>
+    <string name="customer_num">顾客总数</string>
+    <string name="goods_manager">商品管理</string>
+    <string name="order_manager">订单管理</string>
+    <string name="guide_recruit">导购招募</string>
+    <string name="store_analysis">门店分析</string>
+    <string name="goods_analysis">商品分析</string>
+    <string name="customer_analysis">顾客分析</string>
 </resources>

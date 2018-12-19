@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_color_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <ListView
+        android:id="@+id/lv_guide_apply_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/activity_color_bg"
+        android:dividerHeight="8dp" />
+
+</LinearLayout>

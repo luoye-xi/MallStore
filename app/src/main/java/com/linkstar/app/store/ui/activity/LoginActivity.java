@@ -38,6 +38,7 @@ public class LoginActivity extends BasePicTitleActivity implements View.OnClickL
 
     @Override
     public void initView() {
+        setSwipeBackEnable(false);
         etAccount = (EditText) this.findViewById(R.id.et_mall_account);
         etPwd = (EditText) this.findViewById(R.id.et_mall_password);
         cbShow = (CheckBox) this.findViewById(R.id.cb_show_pwd);

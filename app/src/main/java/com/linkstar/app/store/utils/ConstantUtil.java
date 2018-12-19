@@ -11,4 +11,7 @@ public class ConstantUtil {
      * 判断当前是否为调试模式->关闭账号验证等
      */
     public static boolean isDebug = true;
+
+    public static int SCREEN_WIDTH;
+    public static int SCREEN_HEIGHT;
 }
