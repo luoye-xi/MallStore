@@ -9,8 +9,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.linkstar.app.store.R;
 
 /**
@@ -21,6 +19,8 @@ import com.linkstar.app.store.R;
 public class LvGuideApplyAdapter extends BaseAdapter {
     private Context context;
     private boolean isHistory;//是否为导购申请历史记录
+    private onAgreeListener mOnAgreeListener;
+    private onRefuseListener mOnRefuseListener;
 
     public LvGuideApplyAdapter(Context context, boolean isHistory) {
         this.context = context;
@@ -43,7 +43,7 @@ public class LvGuideApplyAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_lv_guide_apply, null);
         TextView tvMsg = view.findViewById(R.id.tv_guide_apply_msg);
         TextView tvAgree = view.findViewById(R.id.tv_agree);
@@ -62,17 +62,33 @@ public class LvGuideApplyAdapter extends BaseAdapter {
         tvAgree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "同意申请", Toast.LENGTH_SHORT).show();
+                mOnAgreeListener.onAgreeClick(position);
             }
         });
 
         tvRefuse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "拒绝申请", Toast.LENGTH_SHORT).show();
+                mOnRefuseListener.onRefuseClick(position);
             }
         });
 
         return view;
+    }
+
+    public interface onAgreeListener {
+        void onAgreeClick(int position);
+    }
+
+    public void setOnAgreeListener(onAgreeListener mOnAgreeListener) {
+        this.mOnAgreeListener = mOnAgreeListener;
+    }
+
+    public interface onRefuseListener {
+        void onRefuseClick(int position);
+    }
+
+    public void setOnRefuseListener(onRefuseListener mOnRefuseListener) {
+        this.mOnRefuseListener = mOnRefuseListener;
     }
 }

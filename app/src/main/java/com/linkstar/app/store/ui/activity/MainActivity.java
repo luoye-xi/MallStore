@@ -1,5 +1,6 @@
 package com.linkstar.app.store.ui.activity;
 
+import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.View;
@@ -18,7 +19,8 @@ import java.util.TimerTask;
 public class MainActivity extends BasePicTitleActivity implements View.OnClickListener {
     private boolean isExit = false;
     private ImageView imgMsg, imgSetting;
-    private LinearLayout goodsManager, orderManager, guideRecruit, storeData, goodsAnalysis;
+    private LinearLayout goodsManager, orderManager, guideRecruit, storeData, goodsAnalysis, customerAnalysis,
+            totalData, onlineData, offlineData;
 
     @Override
     public int setLayout() {
@@ -41,6 +43,10 @@ public class MainActivity extends BasePicTitleActivity implements View.OnClickLi
         guideRecruit = (LinearLayout) findViewById(R.id.layout_guide_recruit);
         storeData = (LinearLayout) findViewById(R.id.layout_store_data);
         goodsAnalysis = (LinearLayout) findViewById(R.id.layout_goods_analysis);
+        customerAnalysis = (LinearLayout) findViewById(R.id.layout_customer_analysis);
+        totalData = (LinearLayout) findViewById(R.id.layout_to_total_data);
+        onlineData = (LinearLayout) findViewById(R.id.layout_to_online_data);
+        offlineData = (LinearLayout) findViewById(R.id.layout_to_offline_data);
     }
 
     @Override
@@ -52,6 +58,10 @@ public class MainActivity extends BasePicTitleActivity implements View.OnClickLi
         guideRecruit.setOnClickListener(this);
         storeData.setOnClickListener(this);
         goodsAnalysis.setOnClickListener(this);
+        customerAnalysis.setOnClickListener(this);
+        totalData.setOnClickListener(this);
+        onlineData.setOnClickListener(this);
+        offlineData.setOnClickListener(this);
     }
 
     @Override
@@ -62,6 +72,7 @@ public class MainActivity extends BasePicTitleActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
+        Bundle bundle = null;
         switch (v.getId()) {
             case R.id.img_to_msg_center:
                 //消息图标点击事件—跳转到消息中心界面
@@ -90,6 +101,28 @@ public class MainActivity extends BasePicTitleActivity implements View.OnClickLi
             case R.id.layout_goods_analysis:
                 //商品分析
                 startActivity(GoodsAnalysisActivity.class);
+                break;
+            case R.id.layout_customer_analysis:
+                //顾客分析
+                startActivity(CustomerAnalysisActivity.class);
+                break;
+            case R.id.layout_to_total_data:
+                //总数据额分析
+                bundle = new Bundle();
+                bundle.putInt("data_type", 1);
+                startActivity(TotalSalesActivity.class, bundle);
+                break;
+            case R.id.layout_to_online_data:
+                //线上销售额
+                bundle = new Bundle();
+                bundle.putInt("data_type", 2);
+                startActivity(TotalSalesActivity.class, bundle);
+                break;
+            case R.id.layout_to_offline_data:
+                //线下销售额
+                bundle = new Bundle();
+                bundle.putInt("data_type", 3);
+                startActivity(TotalSalesActivity.class, bundle);
                 break;
         }
     }

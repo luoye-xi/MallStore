@@ -58,6 +58,7 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/layout_to_total_data"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_below="@+id/layout_1"
@@ -94,6 +95,7 @@
                     android:paddingVertical="16dp">
 
                     <LinearLayout
+                        android:id="@+id/layout_to_online_data"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -116,6 +118,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/layout_to_offline_data"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -392,6 +395,7 @@
                     android:background="@color/line_color_gray" />
 
                 <LinearLayout
+                    android:id="@+id/layout_customer_analysis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

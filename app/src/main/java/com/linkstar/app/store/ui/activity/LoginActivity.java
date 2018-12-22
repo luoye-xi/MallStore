@@ -1,5 +1,6 @@
 package com.linkstar.app.store.ui.activity;
 
+import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.KeyEvent;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.linkstar.app.store.R;
@@ -29,6 +31,7 @@ public class LoginActivity extends BasePicTitleActivity implements View.OnClickL
     private EditText etAccount, etPwd;
     private CheckBox cbShow;
     private Button btnLogin;
+    private TextView toFind;
     private boolean isExit = false;
 
     @Override
@@ -43,12 +46,14 @@ public class LoginActivity extends BasePicTitleActivity implements View.OnClickL
         etPwd = (EditText) this.findViewById(R.id.et_mall_password);
         cbShow = (CheckBox) this.findViewById(R.id.cb_show_pwd);
         btnLogin = (Button) this.findViewById(R.id.btn_login);
+        toFind = (TextView) this.findViewById(R.id.tv_to_find_pwd);
     }
 
     @Override
     public void event() {
         btnLogin.setOnClickListener(this);
         cbShow.setOnClickListener(this);
+        toFind.setOnClickListener(this);
     }
 
     @Override
@@ -84,6 +89,11 @@ public class LoginActivity extends BasePicTitleActivity implements View.OnClickL
                     }
                 }
                 startActivity(MainActivity.class);
+                break;
+            case R.id.tv_to_find_pwd:
+                Bundle bundle = new Bundle();
+                bundle.putBoolean("is_find", true);
+                startActivity(PwdManagerActivity.class, bundle);
                 break;
         }
     }

@@ -132,6 +132,17 @@
                     android:background="@color/line_color_gray" />
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/tv_to_find_pwd"
+                style="@style/text_style_blue_12"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="42dp"
+                android:gravity="right|center_vertical"
+                android:text="忘记密码？"
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/btn_login"
                 style="@style/text_style_white_15"

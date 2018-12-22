@@ -60,6 +60,21 @@
         <activity
             android:name=".ui.activity.GuideSettingActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MsgSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PwdManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CustomerAnalysisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TotalSalesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.OrderTimeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

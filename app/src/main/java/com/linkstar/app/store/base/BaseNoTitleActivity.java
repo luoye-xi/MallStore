@@ -25,7 +25,6 @@ public abstract class BaseNoTitleActivity extends BaseActivity {
                 .statusBarDarkFont(true, 0.2f)
                 .init();
         setContentView(setLayout());
-        AndroidBug5497Workaround.assistActivity(this);
         initView();
         event();
         loadData();
