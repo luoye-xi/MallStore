@@ -143,6 +143,7 @@
             android:background="@color/line_color_gray" />
 
         <RelativeLayout
+            android:id="@+id/layout_to_feedback"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 

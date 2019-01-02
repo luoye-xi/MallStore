@@ -228,7 +228,7 @@ public class GraphChartView extends View {
             } else {
                 mWrapPaint.setStyle(Paint.Style.STROKE);
                 //设置曲线粗细
-                mWrapPaint.setStrokeWidth(5);
+                mWrapPaint.setStrokeWidth(8);
             }
             mWrapPaint.setColor(wave.color);
             canvas.drawPath(path, mWrapPaint);

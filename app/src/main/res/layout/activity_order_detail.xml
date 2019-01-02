@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_color_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:background="@color/main_color_blue"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    style="@style/text_style_white_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="部分发货" />
+
+                <TextView
+                    style="@style/text_style_white_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="下单时间：2018-11-25  17:13:45" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_style_black_title_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/icon_vertical_line_blue"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="商品信息" />
+
+                <include layout="@layout/view_line" />
+
+                <ListView
+                    android:id="@+id/lv_goods_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/white"
+                    android:paddingHorizontal="15dp">
+
+                    <TextView
+                        style="@style/text_style_black_title_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="共2件商品" />
+
+                    <TextView
+                        style="@style/text_style_blue_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="¥200.00" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_style_black_title_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/icon_vertical_line_blue"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="已发货商品" />
+
+                <include layout="@layout/view_line" />
+
+                <ListView
+                    android:id="@+id/lv_goods_send"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/text_style_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商品金额" />
+
+                    <TextView
+                        style="@style/text_style_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="¥98.0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        style="@style/text_style_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="运费" />
+
+                    <TextView
+                        style="@style/text_style_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="¥6.0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        style="@style/text_style_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="优惠券" />
+
+                    <TextView
+                        style="@style/text_style_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="-¥3.0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        style="@style/text_style_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="积分抵扣" />
+
+                    <TextView
+                        style="@style/text_style_gray_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="-¥3.0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        style="@style/text_style_black_title_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="订单总价" />
+
+                    <TextView
+                        style="@style/text_style_blue_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="-¥39.9" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/text_style_gray_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:lineSpacingExtra="5dp"
+                    android:text="订单编号：201812260001\n订单类型：线上订单\n交易平台：其他" />
+
+                <Button
+                    style="@style/text_style_blue_12"
+                    android:layout_width="68dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_gray_line_12dp"
+                    android:text="复制单号" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

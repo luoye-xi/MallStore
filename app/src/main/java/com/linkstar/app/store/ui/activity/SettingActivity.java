@@ -13,7 +13,7 @@ import com.linkstar.app.store.base.BaseNoTitleActivity;
  */
 
 public class SettingActivity extends BaseNoTitleActivity implements View.OnClickListener {
-    private RelativeLayout toMsgSetting, toUpdate, clearCache;
+    private RelativeLayout toMsgSetting, toUpdate, clearCache, feedback;
 
     @Override
     public int setLayout() {
@@ -26,6 +26,7 @@ public class SettingActivity extends BaseNoTitleActivity implements View.OnClick
         toMsgSetting = (RelativeLayout) findViewById(R.id.layout_to_msg_setting);
         toUpdate = (RelativeLayout) findViewById(R.id.layout_update_pwd);
         clearCache = (RelativeLayout) findViewById(R.id.layout_clear_cache);
+        feedback = (RelativeLayout) findViewById(R.id.layout_to_feedback);
     }
 
     @Override
@@ -33,6 +34,7 @@ public class SettingActivity extends BaseNoTitleActivity implements View.OnClick
         toMsgSetting.setOnClickListener(this);
         toUpdate.setOnClickListener(this);
         clearCache.setOnClickListener(this);
+        feedback.setOnClickListener(this);
     }
 
     @Override
@@ -55,6 +57,10 @@ public class SettingActivity extends BaseNoTitleActivity implements View.OnClick
                 break;
             case R.id.layout_clear_cache:
 
+                break;
+            case R.id.layout_to_feedback:
+                //意见反馈
+                startActivity(FeedbackActivity.class);
                 break;
         }
     }

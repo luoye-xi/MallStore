@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Store</string>
+    <string name="app_name">商家端</string>
     <string name="name_store_login">商家端</string>
     <string name="input_account">请输入您的账号</string>
     <string name="input_password">请输入密码</string>

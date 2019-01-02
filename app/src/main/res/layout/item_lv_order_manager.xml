@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_order_manager_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:orientation="vertical">
 
     <View
@@ -41,7 +45,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="@color/line_color_gray"
-        android:dividerHeight="1px" />
+        android:dividerHeight="1px"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
 
     <View
         android:layout_width="match_parent"

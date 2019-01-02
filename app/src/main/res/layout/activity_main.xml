@@ -82,7 +82,7 @@
                         android:layout_marginTop="8dp"
                         android:text="14285.32"
                         android:textColor="@color/white"
-                        android:textSize="30sp"
+                        android:textSize="26sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -152,6 +152,7 @@
                 android:paddingVertical="26dp">
 
                 <LinearLayout
+                    android:id="@+id/layout_order_num_month"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -179,6 +180,7 @@
                     android:background="@color/line_color_gray" />
 
                 <LinearLayout
+                    android:id="@+id/layout_sale_today"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -206,6 +208,7 @@
                     android:background="@color/line_color_gray" />
 
                 <LinearLayout
+                    android:id="@+id/layout_total_custom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

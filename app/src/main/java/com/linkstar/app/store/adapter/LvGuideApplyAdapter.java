@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.linkstar.app.store.R;
 
 /**
@@ -54,6 +55,11 @@ public class LvGuideApplyAdapter extends BaseAdapter {
 
         if (isHistory) {
             img.setVisibility(View.VISIBLE);
+            if (position % 2 == 0) {
+                img.setImageResource(R.drawable.icon_consent);
+            } else {
+                img.setImageResource(R.drawable.icon_repulse);
+            }
         } else {
             layout.setVisibility(View.VISIBLE);
         }

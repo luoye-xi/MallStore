@@ -21,6 +21,7 @@ public class MainActivity extends BasePicTitleActivity implements View.OnClickLi
     private ImageView imgMsg, imgSetting;
     private LinearLayout goodsManager, orderManager, guideRecruit, storeData, goodsAnalysis, customerAnalysis,
             totalData, onlineData, offlineData;
+    private LinearLayout orderMonth, daySale, totalCustom;
 
     @Override
     public int setLayout() {
@@ -47,6 +48,9 @@ public class MainActivity extends BasePicTitleActivity implements View.OnClickLi
         totalData = (LinearLayout) findViewById(R.id.layout_to_total_data);
         onlineData = (LinearLayout) findViewById(R.id.layout_to_online_data);
         offlineData = (LinearLayout) findViewById(R.id.layout_to_offline_data);
+        orderMonth = (LinearLayout) findViewById(R.id.layout_order_num_month);
+        daySale = (LinearLayout) findViewById(R.id.layout_sale_today);
+        totalCustom = (LinearLayout) findViewById(R.id.layout_total_custom);
     }
 
     @Override
@@ -62,6 +66,9 @@ public class MainActivity extends BasePicTitleActivity implements View.OnClickLi
         totalData.setOnClickListener(this);
         onlineData.setOnClickListener(this);
         offlineData.setOnClickListener(this);
+        orderMonth.setOnClickListener(this);
+//        daySale.setOnClickListener(this);
+//        totalCustom.setOnClickListener(this);
     }
 
     @Override
@@ -122,6 +129,24 @@ public class MainActivity extends BasePicTitleActivity implements View.OnClickLi
                 //线下销售额
                 bundle = new Bundle();
                 bundle.putInt("data_type", 3);
+                startActivity(TotalSalesActivity.class, bundle);
+                break;
+            case R.id.layout_order_num_month:
+                //本月订单数
+                bundle = new Bundle();
+                bundle.putInt("data_type", 1);
+                startActivity(TotalSalesActivity.class, bundle);
+                break;
+            case R.id.layout_sale_today:
+                //今日销售额
+                bundle = new Bundle();
+                bundle.putInt("data_type", 1);
+                startActivity(TotalSalesActivity.class, bundle);
+                break;
+            case R.id.layout_total_custom:
+                //顾客总数
+                bundle = new Bundle();
+                bundle.putInt("data_type", 1);
                 startActivity(TotalSalesActivity.class, bundle);
                 break;
         }

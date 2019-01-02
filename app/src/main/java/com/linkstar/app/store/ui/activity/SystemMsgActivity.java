@@ -1,9 +1,14 @@
 package com.linkstar.app.store.ui.activity;
 
 import android.view.View;
+import android.widget.ListView;
 
 import com.linkstar.app.store.R;
+import com.linkstar.app.store.adapter.SystemMsgAdapter;
 import com.linkstar.app.store.base.BaseNoTitleActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by hx
@@ -11,6 +16,9 @@ import com.linkstar.app.store.base.BaseNoTitleActivity;
  */
 
 public class SystemMsgActivity extends BaseNoTitleActivity {
+    private ListView lvMsg;
+    private SystemMsgAdapter adapter;
+    private List<String> data = new ArrayList<>();
 
     @Override
     public int setLayout() {
@@ -20,6 +28,16 @@ public class SystemMsgActivity extends BaseNoTitleActivity {
     @Override
     public void initView() {
         setTitleMsg("系统消息", "清空");
+        lvMsg = (ListView) findViewById(R.id.lv_sys_msg);
+
+        data.add("1");
+        data.add("1");
+        data.add("1");
+        data.add("1");
+        data.add("1");
+
+        adapter = new SystemMsgAdapter(this, data);
+        lvMsg.setAdapter(adapter);
     }
 
     @Override
@@ -27,7 +45,8 @@ public class SystemMsgActivity extends BaseNoTitleActivity {
         setSubClick(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showShortToast("清空");
+                data.clear();
+                adapter.notifyDataSetChanged();
             }
         });
     }

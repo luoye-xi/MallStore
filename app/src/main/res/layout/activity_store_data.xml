@@ -129,6 +129,7 @@
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_store_data_month"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/white"
@@ -180,6 +181,7 @@
         android:background="@color/line_color_gray" />
 
     <RelativeLayout
+        android:id="@+id/layout_store_data_order"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/white"
@@ -231,6 +233,7 @@
         android:background="@color/line_color_gray" />
 
     <RelativeLayout
+        android:id="@+id/layout_store_data_member"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/white"
@@ -282,6 +285,7 @@
         android:background="@color/line_color_gray" />
 
     <RelativeLayout
+        android:id="@+id/layout_store_data_month_all"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/white"
